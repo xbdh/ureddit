@@ -1,0 +1,50 @@
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rm-uf62navls7dqkw7xjfo.mysql.rds.aliyuncs.com:3306/ureddit?&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: ureddit_admin
+    password: Root0315mm+-
+#    hikari:
+#      minimum-idle: 20
+#      maximum-pool-size: 100
+#      idle-timeout: 30000
+#      pool-name: UredditHikariCP
+#      max-lifetime: 1800000
+#      connection-timeout: 30000
+  main:
+    banner-mode: off
+  sql:
+    init:
+      schema-locations: classpath:db/schema.sql
+      #data-locations: classpath:db/data.sql
+      platform: mysql
+      mode: never
+#      mode: #always when first time init
+#      continue-on-error: true
+#
+#dubbo:
+#  application:
+#    name: subscription-provider
+#   # register-mode: instance interface all
+#  protocol:
+#    name: dubbo
+#    port: 20003
+#  #  consumer:
+#  #    check: false
+#  registry:
+#    #address: nacos://122.51.108.196:8848
+#    address: nacos://127.0.0.1:8848
+#  provider:
+#    timeout: 15000
+#    retries: 0
+#  # 只注册istanceId对应的服务
+
+#debug: true
+logging:
+  level:
+    root: WARN
+    com.jicyu: INFO
+server:
+  port: 8003

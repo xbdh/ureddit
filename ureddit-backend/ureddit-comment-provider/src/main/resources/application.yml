@@ -1,0 +1,58 @@
+
+#spring:
+#  data:
+#    mongodb:
+#      host: 122.51.108.196
+#      port: 27017
+#      username: adminUser
+#      password: Root0315mm
+#      database: ureddit
+#      authentication-database: admin
+#  main:
+#    banner-mode: off
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rm-uf62navls7dqkw7xjfo.mysql.rds.aliyuncs.com/ureddit?&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: ureddit_admin
+    password: Root0315mm+-
+#    hikari:
+#      minimum-idle: 20
+#      maximum-pool-size: 100
+#      idle-timeout: 30000
+#      pool-name: UredditHikariCP
+#      max-lifetime: 1800000
+#      connection-timeout: 30000
+  main:
+    banner-mode: off
+  sql:
+    init:
+      schema-locations: classpath:db/schema.sql
+      #data-locations: classpath:db/data.sql
+      platform: mysql
+      mode: never
+#
+#dubbo:
+#  application:
+#    name: post-provider
+#  protocol:
+#    name: dubbo
+#    port: 20001
+#  #  consumer:
+#  #    check: false
+#  registry:
+#    #address: nacos://122.51.108.196:8848
+#    address: nacos://127.0.0.1:8848
+#  provider:
+#    timeout: 15000
+#    retries: 0
+#  # 只注册istanceId对应的服务
+#debug: true
+logging:
+  level:
+    root: WARN
+    com.jicyu: INFO
+server:
+  port: 8006

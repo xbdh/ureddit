@@ -1,0 +1,35 @@
+
+#dubbo:
+#  application:
+#    name: ureddit-api
+#    protocol:
+#        name: dubbo
+#        port: 21001
+#  consumer:
+#    check: false
+#    timeout: 15000
+#  registry:
+##    address: nacos://122.51.108.196:8848
+#    address: nacos://127.0.0.1:8848
+
+server:
+  port: 9999
+
+
+logging:
+  level:
+    root: WARN
+    com.jicyu: INFO
+
+spring:
+  main:
+    banner-mode: off
+
+rpcClient:
+  postUrl: http://localhost:8001
+  subredditUrl: http://localhost:8002
+  subscriptionUrl: http://localhost:8003
+  userUrl: http://localhost:8004
+  voteUrl: http://localhost:8005
+  commentUrl: http://localhost:8006
+
